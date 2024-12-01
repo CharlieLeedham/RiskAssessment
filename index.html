@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Risk Assessment & Method Statement</title>
+    <link rel='stylesheet' href='style.css'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js'></script>
+    <script src='script.js'></script>
+</head>
+
+<body>
+    <header>
+        <h1>Paul Robinson's RAMS software</h1>
+        <nav>
+            <ul>
+                <li onclick='exportToPDF(event, false)'>View Preview</li>
+                <li>
+                    <button onclick='exportToPDF()'>Export</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id='landscapeLayout' style='display: block'>
+            <section id='container1'>
+                <table>
+                    <tr>
+                        <td rowspan='2' style='text-align: center; vertical-align: middle;'>
+                            <img src='images/logo.jpg'>
+                        </td>
+                        <th colspan='3' style='font-size: 24px; text-align: center; height: 100%; max-width: 60px'
+                            contenteditable>Risk
+                            Assessment &
+                            Method Statement</th>
+                    </tr>
+                    <tr>
+                        <th contenteditable>Client/Principal Contractor</th>
+                        <td colspan='2' contenteditable>KIER FACILITIES</td>
+                    </tr>
+                    <tr>
+                        <th contenteditable>Job/project description</th>
+                        <td contenteditable>INTERNAL PAINTING TO THE MEADOWBANK WARD AND RECEPTION.</td>
+                        <th contenteditable>Site/Location</th>
+                        <td contenteditable>BERRYWOOD HOSPITAL, BERRYWOOD DRIVE, DUSTON, NORTHAMPTON</td>
+                    </tr>
+                    <tr>
+                        <th contenteditable>Work will start on</th>
+                        <td contenteditable>09/10/2023</td>
+                        <th contenteditable>Work will finish on</th>
+                        <td contenteditable>TBC</td>
+                    </tr>
+                    <tr>
+                        <th contenteditable>Assessor name</th>
+                        <td contenteditable>Gary cope</td>
+                        <th contenteditable>Signature</th>
+                        <td contenteditable>G cope</td>
+                    </tr>
+                </table>
+
+                <table style='margin: 0'>
+                    <thead>
+                        <tr>
+                            <td style='font-size: 12px; text-align: left; width: 100%' colspan='7' contenteditable>*(E)
+                                Employees, (PD)
+                                People with
+                                disabilities, (C)
+                                Contractors, (V) Visitors,
+                                (R) Residents,
+                                (MP) Members of Public,
+                                (N&E) New & Expectant Mothers, (YP) Young People</td>
+                        </tr>
+                        <tr>
+                            <th style='max-width: 22px;' contenteditable>Task causing risk</th>
+                            <th contenteditable>Relevant to This job? Yes/No</th>
+                            <th style='max-width: 22px;' contenteditable>Hazard</th>
+                            <th contenteditable>*Who is at risk?</th>
+                            <th style='max-width: 22px;' contenteditable>Controls</th>
+                            <th contenteditable>Is the risk adequately controlled</th>
+                            <th style='max-width: 22px;' contenteditable>What monitoring or other actions are required
+                                to ensure the
+                                risks remain controlled?
+                            </th>
+                            <th style='display: contents'>
+                                <span onclick='addRow(event, 1)' class='add-row'>Add row</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+
+            <section id='container2'>
+                <table style='margin: 0 0 5px'>
+                    <thead>
+                        <tr>
+                            <th style='font-size: 24px' contenteditable>Method Statement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td contenteditable>
+                                The site has been surveyed and/or a meeting held with client or site controller to
+                                discuss
+                                access, emergency arrangements and the method statement. Risk assessment completed as
+                                above.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style='display: flex'>
+                    <table style='width: 80%; margin: 0 5px 5px 0'>
+                        <thead>
+                            <tr>
+                                <th colspan='7' contenteditable>Protective equipment required (minimum)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th contenteditable>Safety footwear</th>
+                                <th contenteditable>Hi-vis clothing</th>
+                                <th contenteditable>Hearing protection</th>
+                                <th contenteditable>Eye Protection EN 166 standard</th>
+                                <th contenteditable>Dust mask to FFP 3 minimum</th>
+                                <th contenteditable>Hard Hat</td>
+                                <th contenteditable>Gloves EN 388:200 Standard</th>
+                            </tr>
+                            <tr>
+                                <td style='text-align: center;' contenteditable>YES</td>
+                                <td style='text-align: center;' contenteditable>NO</td>
+                                <td style='text-align: center;' contenteditable>YES</td>
+                                <td style='text-align: center;' contenteditable>YES</td>
+                                <td style='text-align: center;' contenteditable>YES</td>
+                                <td style='text-align: center;' contenteditable>YES</td>
+                                <td style='text-align: center;' contenteditable>NO</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <table style='width: 20%; margin: 0 0 5px'>
+                        <thead>
+                            <tr>
+                                <th contenteditable>Training required (minimum)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td contenteditable>Safety footwear</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <table style='margin: 0 0 5px'>
+                    <thead>
+                        <tr>
+                            <th contenteditable>Description of the safe method of working</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td contenteditable>
+                                THE WORK INVOLVES PAINTING SOME CEILINGS, ALL WALLS & WOODWORK WITHIN LIVE WARD AND
+                                CORRIDOR
+                                AREAS
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th style='width: 100%' colspan='5' contenteditable>Who will be carrying out the work and is
+                                there a
+                                nominated supervisor ('Yes'
+                                in
+                                relevant box and put S in supervisor)?</th>
+                            <th style='display: contents'>
+                                <span onclick='addRow(event, 2)' class='add-row'>Add row</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+                <table style='margin: 0 0 5px'>
+                    <tbody>
+                        <tr>
+                            <th contenteditable>PTW General</th>
+                            <td style='text-align: center; vertical-align: middle;' contenteditable>YES</td>
+                            <th contenteditable>Hot Work</th>
+                            <td style='text-align: center; vertical-align: middle;' contenteditable>NO</td>
+                            <th contenteditable>Confined space</th>
+                            <td style='text-align: center; vertical-align: middle;' contenteditable>YES</td>
+                            <th contenteditable>Permit to dig</th>
+                            <td style='text-align: center; vertical-align: middle;' contenteditable>YES</td>
+                            <th contenteditable>Roof work</th>
+                            <td style='text-align: center; vertical-align: middle;' contenteditable>YES</td>
+                            <th contenteditable>Other</th>
+                            <td style='width: 20%' contenteditable></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <table>
+                    <thead>
+                        <th colspan='8' style='width: 100%;' contenteditable>What plant or equipment will be used?</th>
+                        <th style='display: contents'>
+                            <span onclick='addRow(event, 3)' class='add-row'>Add row</span>
+                        </th>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+
+                <table style='margin: 0 0 5px'>
+                    <thead>
+                        <tr>
+                            <th contenteditable>Emergency arrangements on site (fire and first aid)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td contenteditable>As per site briefing</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style='margin: 0'>
+                    <thead>
+                        <tr>
+                            <th contenteditable>Environmental control and waste disposal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td contenteditable>
+                                Our waste will be removed by us or by our contractor. Noise will be kept to a minimum.
+                                Any
+                                spillages
+                                will be prevented from entering the water system.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id='container3'>
+                <h2 contenteditable>Induction Briefing and Method statement & risk
+                    assessment
+                    briefing sign off
+                    sheet</h2>
+
+                <div contenteditable>I the undersigned confirm that the safe system of work
+                    detailed in this method
+                    statement has been
+                    communicated to me
+                    prior to starting work and I
+                    will work in accordance with the procedures and controls identified. I also confirm that I have been
+                    inducted onto site
+                    and have been provided with
+                    information on site safety. If I am in any doubt about the adequacy of the control measures
+                    identified I
+                    will report the
+                    situation to the Site Supervisor.</div>
+
+                <table style='margin: 40px 0 0'>
+                    <thead>
+                        <tr>
+                            <th style='width: 22.5%' contenteditable>Print Name (clearly)</th>
+                            <th style='width: 22.5%' contenteditable>Sign Name</th>
+                            <th style='width: 10%' contenteditable>Date</th>
+                            <th style='width: 22.5%' contenteditable>Employed by</th>
+                            <th style='width: 22.5%' contenteditable>Briefed by Print Name</th>
+                            <th style='display: contents'>
+                                <span onclick='addRow(event, 4)' class='add-row'>Add row</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <h3 contenteditable>Additional Information</h3>
+                <div id='additionalComments' contenteditable>No additional information.</div>
+            </section>
+        </div>
+    </main>
+
+    <div id='pdfPreviewContainer' style='display: none'>
+        <iframe frameborder='0'></iframe>
+    </div>
+</body>
+
+</html>
