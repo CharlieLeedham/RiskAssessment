@@ -65,11 +65,11 @@ header nav ul li button:hover {
 
 main {
     padding: 100px;
+    opacity: 0;
 }
 
 section {
-    max-width: 297mm;
-    min-height: 210mm;
+    transition: all ease 0.5s;
     margin: 20px auto;
     background-color: white;
     position: relative;

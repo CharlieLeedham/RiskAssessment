@@ -16,6 +16,12 @@
         <h1>Paul Robinson's RAMS software</h1>
         <nav>
             <ul>
+                <li onclick='resetDefault()'>Reset to default values</li>
+                <span style='color: #ffffff'>|</span>
+                <li onclick='updatePageLayout("portrait")'>Portrait</li>
+                <span style='color: white'>|</span>
+                <li onclick='updatePageLayout("landscape")'>Landscape</li>
+                <span style='color: white'>|</span>
                 <li onclick='exportToPDF(event, false)'>View Preview</li>
                 <li>
                     <button onclick='exportToPDF()'>Export</button>
@@ -73,13 +79,15 @@
                                 (N&E) New & Expectant Mothers, (YP) Young People</td>
                         </tr>
                         <tr>
-                            <th style='max-width: 22px;' contenteditable>Task causing risk</th>
-                            <th contenteditable>Relevant to This job? Yes/No</th>
-                            <th style='max-width: 22px;' contenteditable>Hazard</th>
-                            <th contenteditable>*Who is at risk?</th>
-                            <th style='max-width: 22px;' contenteditable>Controls</th>
-                            <th contenteditable>Is the risk adequately controlled</th>
-                            <th style='max-width: 22px;' contenteditable>What monitoring or other actions are required
+                            <th style='width: 12%' contenteditable>Task causing risk</th>
+                            <th style='width: 10%' contenteditable>Relevant to This job? Yes/No</th>
+                            <th style='width: 15%' contenteditable>Hazard</th>
+                            <th style='width: 10%' contenteditable>*Who is at risk?</th>
+                            <th style='width: 16%' contenteditable>Controls</th>
+                            <th style='width: 12%' contenteditable>Is the risk adequately
+                                controlled</th>
+                            <th style='width: 25%' id='monitoringControls' contenteditable>What monitoring or
+                                other actions are required
                                 to ensure the
                                 risks remain controlled?
                             </th>
@@ -93,7 +101,7 @@
             </section>
 
             <section id='container2'>
-                <table style='margin: 0 0 5px'>
+                <table style='margin: 0 0 10px'>
                     <thead>
                         <tr>
                             <th style='font-size: 24px' contenteditable>Method Statement</th>
@@ -112,7 +120,7 @@
                 </table>
 
                 <div style='display: flex'>
-                    <table style='width: 80%; margin: 0 5px 5px 0'>
+                    <table style='width: 80%; margin: 0 5px 10px 0'>
                         <thead>
                             <tr>
                                 <th colspan='7' contenteditable>Protective equipment required (minimum)</th>
@@ -140,7 +148,7 @@
                         </tbody>
                     </table>
 
-                    <table style='width: 20%; margin: 0 0 5px'>
+                    <table style='width: 20%; margin: 0 0 10px'>
                         <thead>
                             <tr>
                                 <th contenteditable>Training required (minimum)</th>
@@ -154,7 +162,7 @@
                     </table>
                 </div>
 
-                <table style='margin: 0 0 5px'>
+                <table style='margin: 0 0 10px'>
                     <thead>
                         <tr>
                             <th contenteditable>Description of the safe method of working</th>
@@ -171,7 +179,7 @@
                     </tbody>
                 </table>
 
-                <table>
+                <table style='margin: 0 0 10px'>
                     <thead>
                         <tr>
                             <th style='width: 100%' colspan='5' contenteditable>Who will be carrying out the work and is
@@ -184,10 +192,25 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                        <tr>
+                            <th style='width: 17%; vertical-align: middle' contenteditable>Worker name</th>
+                            <td style='width: 63%; vertical-align: middle' contenteditable>PAUL ROBINSON</td>
+                            <td style='width: 10%; text-align: center; vertical-align: middle' contenteditable>Yes</td>
+                            <td style='width: 10%; text-align: center; vertical-align: middle' contenteditable>S</td>
+                            <td style='display: contents'>
+                                <span onclick='removeRow()' class='remove-row'>Remove</span>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
 
-                <table style='margin: 0 0 5px'>
+                <table style='margin: 0 0 10px'>
+                    <thead>
+                        <tr>
+                            <th style='width: 100%' colspan='12' contenteditable>What permits are used?</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
                             <th contenteditable>PTW General</th>
@@ -200,14 +223,15 @@
                             <td style='text-align: center; vertical-align: middle;' contenteditable>YES</td>
                             <th contenteditable>Roof work</th>
                             <td style='text-align: center; vertical-align: middle;' contenteditable>YES</td>
+                        </tr>
+                        <tr>
                             <th contenteditable>Other</th>
-                            <td style='width: 20%' contenteditable></td>
+                            <td colspan='9' contenteditable></td>
                         </tr>
                     </tbody>
                 </table>
 
-
-                <table>
+                <table style='margin: 0 0 10px'>
                     <thead>
                         <th colspan='8' style='width: 100%;' contenteditable>What plant or equipment will be used?</th>
                         <th style='display: contents'>
@@ -218,7 +242,7 @@
                 </table>
 
 
-                <table style='margin: 0 0 5px'>
+                <table style='margin: 0 0 10px'>
                     <thead>
                         <tr>
                             <th contenteditable>Emergency arrangements on site (fire and first aid)</th>
@@ -251,25 +275,40 @@
             </section>
 
             <section id='container3'>
-                <h2 contenteditable>Induction Briefing and Method statement & risk
-                    assessment
-                    briefing sign off
-                    sheet</h2>
+                <table style='margin: 0;'>
+                    <thead>
+                        <tr>
+                            <th style='border: none; font-size: 24px; background: none' contenteditable>Induction
+                                Briefing and Method statement & risk
+                                assessment
+                                briefing sign off
+                                sheet</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style='border: none; font-size: 16px;' contenteditable>
+                                I the undersigned confirm that the safe system of work
+                                detailed in this method
+                                statement has been
+                                communicated to me
+                                prior to starting work and I
+                                will work in accordance with the procedures and controls identified. I also confirm that
+                                I
+                                have been
+                                inducted onto site
+                                and have been provided with
+                                information on site safety. If I am in any doubt about the adequacy of the control
+                                measures
+                                identified I
+                                will report the
+                                situation to the Site Supervisor.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
-                <div contenteditable>I the undersigned confirm that the safe system of work
-                    detailed in this method
-                    statement has been
-                    communicated to me
-                    prior to starting work and I
-                    will work in accordance with the procedures and controls identified. I also confirm that I have been
-                    inducted onto site
-                    and have been provided with
-                    information on site safety. If I am in any doubt about the adequacy of the control measures
-                    identified I
-                    will report the
-                    situation to the Site Supervisor.</div>
-
-                <table style='margin: 40px 0 0'>
+                <table style='margin: 40px 0'>
                     <thead>
                         <tr>
                             <th style='width: 22.5%' contenteditable>Print Name (clearly)</th>
@@ -282,10 +321,46 @@
                             </th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+                        <tr>
+                            <td style='vertical-align: middle; height: 40px; text-align: center;' contenteditable>PAUL
+                                ROBINSON
+                            </td>
+                            <td style='vertical-align: middle; height: 40px; text-align: center;' contenteditable>
+                                <img style='width: 50%; height: 40px' src='images/signature.jpg'>
+                            </td>
+                            <td style='vertical-align: middle; height: 40px; text-align: center; width: 16%'
+                                contenteditable>DD/MM/YYYY
+                            </td>
+                            <td style='vertical-align: middle; height: 40px; text-align: center;' contenteditable>
+                                PREMIER
+                                DECORATORS UK LTD</td>
+                            <td style='vertical-align: middle; height: 40px; text-align: center;' contenteditable>G COPE
+                            </td>
+                            <td style='display: contents'>
+                                <span onclick='removeRow()' class='remove-row'>Remove</span>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
-                <h3 contenteditable>Additional Information</h3>
-                <div id='additionalComments' contenteditable>No additional information.</div>
+
+                <table style='margin: 0;'>
+                    <thead>
+                        <tr>
+                            <th style='border: none; font-size: 20px; background: none; text-align: left;'
+                                contenteditable>Additional
+                                Information</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style='height: 300px;' contenteditable>
+                                No additional information.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </section>
         </div>
     </main>
